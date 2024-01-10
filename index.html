@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <!-- Adaptability -->
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Name website -->
+    <title>Scritl</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+
+    <!-- Style  -->
+    <link rel="stylesheet" href="assets/style/all.css">
+
+  </head>
+
+  <body>
+    
+  </body>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0" height="0">
+    <defs>
+      <filter id="fishEyeFilter">
+        <feComponentTransfer in="SourceGraphic" result="out">
+          <feFuncR type="discrete" tableValues="0 0.5 1" />
+          <feFuncG type="discrete" tableValues="0 0.5 1" />
+          <feFuncB type="discrete" tableValues="0 0.5 1" />
+        </feComponentTransfer>
+        <feGaussianBlur stdDeviation="10" />
+        <feComposite in2="SourceGraphic" operator="atop" />
+      </filter>
+    </defs>
+  </svg>
+  <!-- Container -->
+  <div class="container">
+      <div class="content">
+        <p id='1' class="text visible">Привет?</p>
+        <p id='2' class="text hidden">Ты Помнишь Меня?</p>
+        <p id='3' class="text hidden">Неважно...</p>
+        <p id='4' class="text hidden">Я очень очень устал...</p>
+        <p id='5' class="text hidden">Можно взглянуть на тебя?</p>
+
+        <p id='6' class="text hidden">Ты изменился...</p>
+
+        <p id='7' class="text hidden">Будь по твоему...</p>
+        <p id='8' class="text hidden">Взгляни на меня!</p>
+
+        <p id="whitespaceID" class="whitespace">Нажмите пробел что бы продолжить...</p>
+      </div>
+  </div class="container">
+
+  <div class="container__button">
+    <button id="question__2__1" class="question hiddenB">Да</button>
+    <button id="question__2__2" class="question hiddenB">Нет</button>
+    <button id="question__5__1" class="question hiddenB">Да</button>
+    <button id="question__5__2" class="question hiddenB">Нет</button>
+  </div>
+
+  <!-- <div id="camera-container">
+    <video id="camera-stream" autoplay></video>
+    <button id="start-camera">Включить камеру</button>
+  </div> -->
+
+  <div class="fussion"></div>
+  
+  
+  
+  <!-- Scripts -->
+  <script src="assets\scripts\js\animation.js"></script>
+  <script src="assets\scripts\js\quest.js"></script>
+  <script src="assets\scripts\js\space.js"></script>
+  <!-- <script src="assets\scripts\js\camera.js"></script> -->
+
+  </body>
+</html>

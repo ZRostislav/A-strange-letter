@@ -1,0 +1,27 @@
+@keyframes typing {
+  from { width: 0; }
+}
+
+@keyframes typing__revers {
+  from { width: 100%; } 
+  to { width: 0%; }
+}
+
+.visible {
+  opacity: 1;
+  animation: typing 2s,
+  cursor .4s step-end infinite alternate, 
+  typing__revers 2s 5s;
+}
+
+/* .visible {
+  opacity: 1;
+  animation: typing 2s steps(7),
+  cursor .4s step-end infinite alternate, 
+  typing__revers 2s steps(7) 5s;
+} */
+
+.hidden {
+  display: none;
+  opacity: 0;
+}

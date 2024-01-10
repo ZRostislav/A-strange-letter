@@ -1,0 +1,15 @@
+body {
+    overflow: hidden; /* Скрыть возможное переполнение контента за пределами body */
+    filter: url("#fishEyeFilter"); /* Применяем фильтр к тегу body */
+    margin: 0; /* Убедитесь, что у body нет внутренних отступов */
+  }
+
+  /* html {
+    transform: scale(1.5); 
+    border-radius: 50%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+  background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1614339351_63-p-fon-svetlii-stol-89.jpg);
+  }
+   */
+  
+  

@@ -1,0 +1,227 @@
+/* home */
+
+* {
+  font-family: "Bad Script", cursive;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+}
+
+.content {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+
+  z-index: 5;
+  position: relative;
+}
+
+.fussion {
+  position: absolute;
+  inset: -200%;
+  background-image: url("/assets/img/noise.png");
+  opacity: 25%;
+  z-index: 10;
+  /* pointer-events: none; */
+
+  animation: shift 0.2s linear infinite both;
+}
+
+body {
+  overflow: hidden; /* Скрыть возможное переполнение контента за пределами body */
+  filter: url("#fishEyeFilter"); /* Применяем фильтр к тегу body */
+  margin: 0; /* Убедитесь, что у body нет внутренних отступов */
+}
+
+@keyframes shift {
+  0% {
+    transform: translateX(10%) translateY(10%);
+  }
+
+  100% {
+    transform: translateX(-10%) translateY(-10%);
+  }
+}
+
+/* text */
+
+.text {
+  font-size: 5em;
+  letter-spacing: 10px;
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+
+  color: white;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes typing__revers {
+  from {
+    width: 100%;
+    display: flex;
+  }
+  to {
+    width: 0%;
+    display: none;
+  }
+}
+
+.visible {
+  opacity: 1;
+  animation: typing 2s, cursor 0.4s step-end infinite alternate;
+}
+
+.hidden {
+  animation: cursor 0.4s step-end infinite alternate, typing__revers 2s;
+  display: none;
+}
+
+/* Container */
+
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px 15px;
+  display: inline-block;
+
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 992) {
+  .container {
+    max-width: 750;
+  }
+}
+
+@media (max-width: 767) {
+  .container {
+    max-width: none;
+  }
+}
+
+/* Quest */
+
+.container__button {
+  z-index: 7;
+}
+
+.question {
+  color: white;
+  background: none;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 50px; /* Выберите нужное расстояние от нижнего края страницы */
+  width: 20%;
+  font-size: 100px;
+}
+
+.visibleB {
+  display: flex;
+  animation: typingB 2s;
+  z-index: 20;
+}
+
+.hiddenB {
+  display: none;
+  animation: typing__reversB 2s;
+}
+
+@keyframes typingB {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+  to {
+    width: 20%;
+    opacity: 1;
+  }
+}
+
+@keyframes typing__reversB {
+  from {
+    display: flex;
+    opacity: 1;
+  }
+  to {
+    display: none;
+    width: 0%;
+    opacity: 0;
+  }
+}
+
+#question__2__1 {
+  left: 20%;
+}
+
+#question__2__2 {
+  right: 20%;
+}
+
+#question__5__1 {
+  left: 20%;
+}
+
+#question__5__2 {
+  right: 20%;
+}
+
+/* Whitespace */
+
+.whitespace {
+  position: absolute;
+  bottom: 25px;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+/* Camera */
+
+#camera-container {
+  position: relative;
+}
+
+#camera-stream {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+#start-camera {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
