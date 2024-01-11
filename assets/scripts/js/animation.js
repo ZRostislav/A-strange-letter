@@ -123,6 +123,16 @@ document.addEventListener("keydown", function (event) {
           canPressSpace = true;
           setTimeout(() => {
             space.style.display = "";
+            //
+            var eyes_full = document.querySelector(".container__eyes");
+            eyes_full.style.opacity = 1;
+            setTimeout(() => {
+              active__eyes();
+            }, 2000);
+            setInterval(() => {
+              repeatAnimation();
+            }, 15000);
+            //
           }, 5000);
           return;
         }, 2000);
