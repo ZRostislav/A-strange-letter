@@ -22,7 +22,6 @@
 
   <body>
     
-  </body>
   <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0" height="0">
     <defs>
       <filter id="fishEyeFilter">
@@ -36,29 +35,87 @@
       </filter>
     </defs>
   </svg>
+
+  <i class="fa-regular fa-circle-pause fa-fade" id="overlay__pause"></i>
+  
+  <div class="overlay" id="overlay"></div>
+
+<!-- <div class="content" id="content"> -->
+
+  <!-- <p class="hub__stop">+</p> -->
+  <!-- <button id="theme-toggle"></button> -->
+
+  <div class="container__lang" id="container__lang">
+    <div class="lang__background">
+      <p id="100001" class="lang__object" onclick="changeLanguage()">RU</p>
+    </div>
+  </div>
+  
+  
+
+
+  <!-- Container Hub -->
+  <div class="container__hub">
+
   <!-- Container -->
   <div class="container">
       <div class="content">
-        <p id='1' class="text visible">Привет?</p>
+        <p id='1' class="text hidden">Привет?</p>
         <p id='2' class="text hidden">Ты Помнишь Меня?</p>
         <p id='3' class="text hidden">Неважно...</p>
         <p id='4' class="text hidden">Я очень очень устал...</p>
         <p id='5' class="text hidden">Можно взглянуть на тебя?</p>
 
-        <p id='6' class="text hidden">Ты изменился...</p>
+        <p id='6' class="text hidden">-</p>
 
         <p id='7' class="text hidden">Будь по твоему...</p>
         <p id='8' class="text hidden">Взгляни на меня!</p>
+
+        <p id='9' class="text hidden">Ты изменился...</p>
+
+        <p id="10" class="text hidden">Я когда-то тоже был таким...</p>
+        <p id="11" class="text hidden">Таким как ты!</p>
+        <p id="12" class="text hidden">Время и действия меняют...</p>
+        <p id="13" class="text hidden">Человека…</p>
+        <p id="14" class="text hidden">Ответишь мне на вопрос?</p>
+        <p id="15" class="text hidden">Мой Вопрос заключается в тебе…</p>
+        <p id="16" class="text hidden">Перед тем как я задам тебе вопрос…</p>
+        <p id="17" class="text hidden">Хочешь ли что-то спросить у меня?</p>
+        <p id="18" class="text hidden">Интересно…</p>
+        <p id="19" class="text hidden">Многие вопросы даже не имеют значение…</p>
+        <p id="20" class="text hidden">Мой вопрос к тебе…</p>
+        <p id="21" class="text hidden">Ответ имеет для вас значения?</p>
+        <p id="22" class="text hidden">Многое мы переоцениваем и принимаем близко…</p>
+        <p id="23" class="text hidden">К сырцу.</p>
+        <p id="24" class="text hidden">Но это не значит, что это плохо…</p>
+        <p id="25" class="text hidden">Значение для себя, выбирает человек.</p>
+        <p id="26" class="text hidden">1-Коринфянам 6:12 “Всё мне позволительно, но всё полезно; всё мне позволительно, но ничто не должно обладать мною.”</p>
+
+        <!-- <p id="26" class="text hidden"></p>
+        <p id="27" class="text hidden"></p>
+        <p id="28" class="text hidden"></p>
+        <p id="29" class="text hidden"></p>
+        <p id="30" class="text hidden"></p>
+        <p id="31" class="text hidden"></p>
+        <p id="32" class="text hidden"></p>
+        <p id="33" class="text hidden"></p>
+        <p id="34" class="text hidden"></p>
+        <p id="35" class="text hidden"></p>
+        <p id="36" class="text hidden"></p> -->
 
         <p id="whitespaceID" class="whitespace">Нажмите пробел что бы продолжить...</p>
       </div>
   </div class="container">
 
-  <div class="container__button">
+  <div class="container__button" id="questionALL">
     <button id="question__2__1" class="question hiddenB">Да</button>
     <button id="question__2__2" class="question hiddenB">Нет</button>
     <button id="question__5__1" class="question hiddenB">Да</button>
     <button id="question__5__2" class="question hiddenB">Нет</button>
+    <button id="question__13__1" class="question hiddenB">Да</button>
+    <button id="question__13__2" class="question hiddenB">Нет</button>
+    <button id="question__17__1" class="question hiddenB">Да</button>
+    <button id="question__17__2" class="question hiddenB">Нет</button>
   </div>
 
   <div class="container__eyes">
@@ -75,6 +132,24 @@
   </div> -->
 
   <div class="fussion"></div>
+
+</div>
+
+<div class="container__music" id="container__music">
+  <div class="music__player" id="music__player">
+
+    <audio id="song">
+      <source src="assets\music\Music.mp3" type="audio/mpeg">
+    </audio>
+    <input type="range" value="0" id="music__progress">
+
+    <div class="controls__audio">
+      <div onclick="playPause()"><i class="fa-solid fa-pause" id="ctrlIcon"></i></div>
+    </div>
+  </div>
+</div>
+
+<!-- </div> -->
   
   
   
@@ -84,6 +159,16 @@
   <script src="assets\scripts\js\space.js"></script>
   <!-- <script src="assets\scripts\js\camera.js"></script> -->
   <script src="assets\scripts\js\eyes.js"></script>
+  <!-- <script src="assets\scripts\js\audio.js"></script> -->
+  <script src="assets\scripts\js\lang.js"></script>
+  <script src="assets\scripts\js\hub.js"></script>
+  <!-- <script src="assets\scripts\js\light-mode.js"></script> -->
+  <!-- Script Quest -->
+  <script src="assets\scripts\js/quest\quest2.js"></script>
+  <script src="assets\scripts\js/quest\quest5.js"></script>
+  <script src="assets\scripts\js/quest\quest13.js"></script>
+  <!-- Scripts Icon -->
+  <script src="https://kit.fontawesome.com/f9d5ebd1cd.js" crossorigin="anonymous"></script>
 
   </body>
 </html>
