@@ -40,7 +40,7 @@ document.addEventListener("keydown", function (event) {
       quest13();
     }
 
-    if (currentId2 === 18) {
+    if (currentId2 === 17) {
       quest17();
     }
 

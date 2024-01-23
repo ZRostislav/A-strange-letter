@@ -81,15 +81,21 @@
         <p id="15" class="text hidden">Мой Вопрос заключается в тебе…</p>
         <p id="16" class="text hidden">Перед тем как я задам тебе вопрос…</p>
         <p id="17" class="text hidden">Хочешь ли что-то спросить у меня?</p>
+
+
+
         <p id="18" class="text hidden">Интересно…</p>
         <p id="19" class="text hidden">Многие вопросы даже не имеют значение…</p>
         <p id="20" class="text hidden">Мой вопрос к тебе…</p>
-        <p id="21" class="text hidden">Ответ имеет для вас значения?</p>
-        <p id="22" class="text hidden">Многое мы переоцениваем и принимаем близко…</p>
-        <p id="23" class="text hidden">К сырцу.</p>
-        <p id="24" class="text hidden">Но это не значит, что это плохо…</p>
-        <p id="25" class="text hidden">Значение для себя, выбирает человек.</p>
-        <p id="26" class="text hidden">1-Коринфянам 6:12 “Всё мне позволительно, но всё полезно; всё мне позволительно, но ничто не должно обладать мною.”</p>
+
+        <p id="21" class="text hidden">message-box</p>
+
+        <p id="22" class="text hidden">Ответ имеет для вас значения?</p>
+        <p id="23" class="text hidden">Многое мы переоцениваем и принимаем близко…</p>
+        <p id="24" class="text hidden">К сырцу.</p>
+        <p id="25" class="text hidden">Но это не значит, что это плохо…</p>
+        <p id="26" class="text hidden">Значение для себя, выбирает человек.</p>
+        <p id="27" class="text hidden">1-Коринфянам 6:12 “Всё мне позволительно, но всё полезно; всё мне позволительно, но ничто не должно обладать мною.”</p>
 
         <!-- <p id="26" class="text hidden"></p>
         <p id="27" class="text hidden"></p>
@@ -106,6 +112,14 @@
         <p id="whitespaceID" class="whitespace">Нажмите пробел что бы продолжить...</p>
       </div>
   </div class="container">
+
+  <div id="chat-container">
+    <input type="text" id="ChatMessageInput" class="hiddenB" placeholder="Введите сообщение...">
+    <button onclick="sendMessage()" id="ChatMessageButton" class="hiddenB">Отправить</button>
+
+    <input type="text" class="hiddenB" id="user-input2" placeholder="Введите сообщение...">
+    <button class="hiddenB" onclick="sendMessage()">Отправить</button>
+  </div>
 
   <div class="container__button" id="questionALL">
     <button id="question__2__1" class="question hiddenB">Да</button>
@@ -162,11 +176,13 @@
   <!-- <script src="assets\scripts\js\audio.js"></script> -->
   <script src="assets\scripts\js\lang.js"></script>
   <script src="assets\scripts\js\hub.js"></script>
+  <script src="assets\scripts\js\message.js"></script>
   <!-- <script src="assets\scripts\js\light-mode.js"></script> -->
   <!-- Script Quest -->
   <script src="assets\scripts\js/quest\quest2.js"></script>
   <script src="assets\scripts\js/quest\quest5.js"></script>
   <script src="assets\scripts\js/quest\quest13.js"></script>
+  <script src="assets\scripts\js/quest\quest17.js"></script>
   <!-- Scripts Icon -->
   <script src="https://kit.fontawesome.com/f9d5ebd1cd.js" crossorigin="anonymous"></script>
 

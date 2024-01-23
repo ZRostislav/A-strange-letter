@@ -172,9 +172,27 @@ body.light-mode {
   }
 }
 
+@keyframes typingS {
+  from {
+    bottom: 0%;
+    font-size: 5em;
+  }
+  to {
+    bottom: 40%;
+    font-size: 3em;
+  }
+}
+
 .visible {
   opacity: 1;
   animation: typing 2s, cursor 0.4s step-end infinite alternate;
+}
+
+.visibleS {
+  position: relative;
+  bottom: 40%;
+  font-size: 3em;
+  animation: typingS 2s;
 }
 
 .hidden {
